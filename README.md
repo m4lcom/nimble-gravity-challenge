@@ -1,16 +1,59 @@
-# React + Vite
+# Nimble Gravity - Junior Fullstack Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm **Malcom Foca**, a Software Developer from Rosario, Argentina. This repository contains my solution for the Junior Fullstack Developer challenge.
 
-Currently, two official plugins are available:
+The project is a React-based application that interacts with the Nimble Gravity Bot-Filter API to manage job applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **`Framework`:** [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/) (for a fast and modern development environment).
+- **`Language`:** JavaScript (ES6+).
+- **`Styling:`** CSS3 / Tailwind CSS (focused on a clean and professional UI).
+- **`API Handling:`** Asynchronous `fetch` with robust error handling and loading states.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Architecture
+
+I've organized the project following clean code principles to ensure maintainability:
+
+- **`src/components:`** Modular UI components (Job List, Job Item/Card).
+- **`src/services:`** Centralized API logic to separate data fetching from UI concerns.
+- **`State Management:`** Efficient use of React hooks (`useState`, `useEffect`) to handle candidate data and job listings.
+
+---
+
+## Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/m4lcom/nimble-gravity-challenge.git](https://github.com/m4lcom/nimble-gravity-challenge.git)
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run the APP in development mode**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Approach & Highlights
+
+- **`Error Handling:`** The app validates GitHub URLs and handles API errors gracefully.
+- **`UX/UI:`** Included loading indicators to provide feedback during asynchronous operations.
+- **`Clean Git History:`** Meaningful commit messages reflecting the development progress.
+
+---
+
+## Contact
+
+- **`Email:`** malcom.foca@gmail.com
+- **`LinkedIn:`** [linkedin.com/in/malcom-foca](https://linkedin.com/in/malcom-foca/)
+- **`Location:`** Rosario, Argentina
+
+---
