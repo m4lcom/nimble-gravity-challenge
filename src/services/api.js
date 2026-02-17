@@ -10,13 +10,13 @@ export const apiService = {
     if (!response.ok) throw new Error("Failed to fetch candidate data");
     return await response.json();
   },
-  // --- step3 ---
+  // --- step 3 ---
   getJobs: async () => {
     const response = await fetch(`${BASE_URL}/api/jobs/get-list`);
     if (!response.ok) throw new Error("Failed to fetch job data");
     return await response.json();
   },
-  // --- step 4 ---
+  // --- step 5 ---
   applyToJob: async (payload) => {
     const response = await fetch(`${BASE_URL}/api/candidate/apply-to-job`, {
       method: "POST",
@@ -25,6 +25,8 @@ export const apiService = {
       },
       body: JSON.stringify(payload),
     });
+
+    // --- catch error from API ---
     if (!response.ok) {
       const errorBody = await response.json().catch(() => ({}));
       throw new Error(errorBody.message || "Failed to apply to job");
