@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const JobCard = ({ job, candidate, onAply }) => {
-  const [repoUrl, setRepoUrl] = useState(" ");
+const JobCard = ({ job, candidate, onApply }) => {
+  const [repoUrl, setRepoUrl] = useState("");
   const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
@@ -12,17 +12,20 @@ const JobCard = ({ job, candidate, onAply }) => {
     }
 
     setStatus("loading");
+    console.log(candidate);
+
     try {
       const payload = {
         uuid: candidate.uuid,
-        jobId: job.id,
         candidateId: candidate.candidateId,
+        applicationId: candidate.applicationId,
+        jobId: job.id,
         repoUrl: repoUrl,
       };
-      const result = await onAply(payload);
+      const result = await onApply(payload);
       if (result.ok) {
         setStatus("success");
-        setRepoUrl(" ");
+        setRepoUrl("");
       } else {
         setStatus("error");
       }
